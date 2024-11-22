@@ -1,0 +1,57 @@
+/* General container for the Delivery page */
+.delivery-container {
+    padding: 50px 10vw;
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.8;
+  }
+  
+  /* Header section */
+  .delivery-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .delivery-header h1 {
+    font-size: 2.5rem;
+    color: #ff6347; /* Tomato color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #ff6347;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  /* Content section */
+  .delivery-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  .delivery-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .delivery-content strong {
+    color: #ff6347; /* Highlight Quickzee with Tomato color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .delivery-container {
+      padding: 30px 5vw;
+    }
+  
+    .delivery-header h1 {
+      font-size: 2rem;
+    }
+  
+    .delivery-content p {
+      font-size: 1rem;
+    }
+  }
+  

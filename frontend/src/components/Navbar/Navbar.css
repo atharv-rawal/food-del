@@ -1,0 +1,167 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu a,
+.navbar-menu .active {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu .active {
+  color: #e63946;
+}
+
+.navbar-menu a:hover {
+  color: #e63946;
+}
+
+.navbar-menu a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e63946;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu .active::after {
+  width: 100%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-right img {
+  cursor: pointer;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #e63946;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.navbar-right button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-right button:hover {
+  background-color: #d62828;
+}
+
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-profile-dropdown {
+  display: block; /* Changed from none to block */
+  position: absolute;
+  top: 100%; /* Align directly below the profile icon */
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 999;
+  min-width: 150px; /* Consistent dropdown width */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.navbar-profile:hover .navbar-profile-dropdown,
+.navbar-profile-dropdown:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbar-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-profile-dropdown li:hover {
+  background-color: #f7f7f7;
+}
+
+.navbar-profile-dropdown li p {
+  margin: 0;
+}
+
+.navbar-profile-dropdown img {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar-profile-dropdown hr {
+  margin: 5px 20px;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+}

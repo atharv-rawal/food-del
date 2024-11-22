@@ -1,0 +1,128 @@
+/* Basic layout and structure */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Button styling */
+.btn {
+  background-color: tomato;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: darkorange;
+  transform: scale(1.05);
+}
+
+/* Container Styling for each page */
+.become-supplier-container,
+.eligibility-container,
+.registration-container,
+.terms-container,
+.success-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: tomato;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+ul li {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+form input:focus {
+  outline: none;
+  border-color: tomato;
+}
+
+form button {
+  background-color: tomato;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: darkorange;
+}
+
+.success-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.success-container h2 {
+  font-size: 32px;
+  color: #4caf50;
+}
+
+.success-container p {
+  font-size: 18px;
+}
+
+.benefits ul {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.benefits li {
+  margin: 8px 0;
+}
+
+.terms-container ul {
+  margin-top: 15px;
+}
+
+.terms-container ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}

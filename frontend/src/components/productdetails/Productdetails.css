@@ -1,0 +1,96 @@
+/* Product Details Styles */
+.product-details {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  /* Image styling */
+  .product-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+  
+  /* Heading and text styling */
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  
+  /* Price section */
+  .product-details .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Button styling */
+  .purchase-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .purchase-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight grow on hover */
+  }
+  
+  .purchase-btn:active {
+    transform: scale(1); /* Reset on click */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-details {
+      padding: 15px;
+    }
+  
+    .product-img {
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    .purchase-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  

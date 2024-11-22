@@ -1,0 +1,170 @@
+/* Header Styles */
+.header {
+    background-size: contain;
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    justify-content: space-between;
+    margin: 10px auto;
+    background: url('/headerimg.jpg') no-repeat;
+    height: auto; /* Allow the height to adjust based on content */
+    position: relative;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Prevent scrollbar */
+}
+
+.header-left, .header-right {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 18px 0 0 18px;
+}
+
+.header-right {
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0 18px 18px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allows scrolling within right column */
+}
+
+/* Dropdown Styles */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-btn:hover {
+    background-color: #feb47b;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer; /* Pointer cursor for clickable sublist items */
+}
+
+.dropdown-item input {
+    margin-right: 10px;
+    display: none; /* Hide the checkbox */
+}
+
+/* Button Styles */
+.arrange-button {
+    display: flex;
+    justify-content: center;
+}
+
+.arrange-button button {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrange-button button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+}
+
+.arrange-button button:active {
+    transform: scale(1);
+}
+
+/* Header Text Styles */
+.header-contents {
+    color: white;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.header-contents h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.header-contents p {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack columns on smaller screens */
+        height: auto; /* Allow for flexible height based on content */
+    }
+
+    .header-left {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header-right {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px; /* Add space between the columns */
+    }
+
+    .header-contents h1 {
+        font-size: 28px;
+    }
+
+    .header-contents p {
+        font-size: 14px;
+    }
+
+    .arrange-button button {
+        font-size: 18px;
+        padding: 12px 30px; /* Adjust button size for mobile */
+    }
+}
