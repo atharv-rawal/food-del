@@ -10,3 +10,8 @@ the database should work off the bat, using default localhost port for mongodb
 
 Thank you
 
+
+to run the main frontend (for users) and the admin (for admin), cd into respective folders 
+	>> npm install
+	>> npm run dev
+
